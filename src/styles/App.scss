@@ -1,0 +1,55 @@
+:root {
+  --card_width: 250px;
+  --row_increment: 150px;
+  --card_border_radius: 3px;
+}
+
+.app {
+  color: #fff;
+  margin: auto;
+  padding: 15px;
+  max-width: 1040px;
+
+  a {
+    color: #61dafb;
+  }
+
+  &-header {
+    input[type='text'] {
+      padding: 10px 20px;
+      margin: 10px 0;
+      width: 100%;
+      font-size: 1.5em;
+      border-radius: 3px;
+      border: 0;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  &-main {
+    margin-top: 30px;
+
+    .gifs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 250px);
+
+      .gif {
+        margin: 10px;
+        background: #ccc;
+
+        img {
+          object-fit: contain;
+          max-width: 250px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    text-align: center;
+  }
+}
