@@ -1,7 +1,9 @@
-export default function Gif({url, title}) {
+export default function Gif({url, webp, title}) {
     return (
-        <div className="gif">
+        <picture className="gif">
+            <source srcset={webp} type="image/webp" />
+            <source srcset={url} type="image/jpeg" /> 
             <img src={url} alt={title}/>
-        </div>
+        </picture>
     )
 }

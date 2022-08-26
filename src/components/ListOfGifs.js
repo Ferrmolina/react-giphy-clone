@@ -29,7 +29,8 @@ function ListOfGifs ({keyword, explicitContent}) {
                     <Gif 
                         key={singleGif.id}
                         title={singleGif.title} 
-                        url={singleGif.images.downsized_large.url}
+                        url={singleGif.images.original.webp}
+                        webp={singleGif.images.original.webp}
                     />
                 )
             }

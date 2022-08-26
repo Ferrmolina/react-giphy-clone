@@ -34,15 +34,17 @@
 
     .gifs {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 250px);
+      grid-template-columns: repeat(auto-fit, 480px);
+      justify-content: center;
 
       .gif {
         margin: 10px;
         background: #ccc;
 
         img {
-          object-fit: contain;
-          max-width: 250px;
+          object-fit: cover;
+          max-width: 480px;
+          height: 370px;
           width: 100%;
         }
       }

@@ -3,7 +3,7 @@ import ListOfGifs from './components/ListOfGifs';
 import './styles/App.scss';
 
 function App() {
-  const [keyword, setKeyword] = useState('');
+  const [keyword, setKeyword] = useState('panda');
   const [explicitContent, setExplicitContent] = useState(false);
 
   return (
