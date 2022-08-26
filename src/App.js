@@ -26,7 +26,7 @@ function App() {
         <ListOfGifs keyword={keyword} explicitContent={explicitContent} />
       </main>
       <footer className="app-footer">
-        Made by Fmolina
+        Made by Fmolina | <a href="https://github.com/Ferrmolina/react-switch-theme" target='blank'>View source code</a>
       </footer>
     </div>
   );
