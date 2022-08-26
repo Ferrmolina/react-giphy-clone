@@ -15,6 +15,8 @@
   }
 
   &-header {
+    text-align: center;
+
     input[type='text'] {
       padding: 10px 20px;
       margin: 10px 0;
@@ -23,10 +25,6 @@
       border-radius: 3px;
       border: 0;
     }
-
-    label {
-      cursor: pointer;
-    }
   }
 
   &-main {
@@ -34,17 +32,17 @@
 
     .gifs {
       display: grid;
-      grid-template-columns: repeat(auto-fit, 480px);
+      grid-template-columns: repeat(auto-fill, 280px);
       justify-content: center;
 
       .gif {
+        cursor: pointer;
         margin: 10px;
-        background: #ccc;
 
         img {
           object-fit: cover;
-          max-width: 480px;
-          height: 370px;
+          max-width: 280px;
+          height: 280px;
           width: 100%;
         }
       }

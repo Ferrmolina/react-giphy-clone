@@ -1,23 +1,24 @@
 import { useEffect, useState } from "react";
 import SearchService from "../services/SearchService";
 import Gif from "./Gif";
+import Loading from "./Loading";
 
-function ListOfGifs ({keyword, explicitContent}) {
+function ListOfGifs ({keyword}) {
     const [gifs, setGifs] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState();
     
     useEffect(()=> {
         setLoading(true)
-        SearchService({keyword}, {explicitContent})
+        SearchService({keyword})
             .then(res => res.json())
             .then(response => {
                 setGifs(response.data)
                 setLoading(false)
             })
-    }, [keyword, explicitContent])
+    }, [keyword])
 
     if (loading) {
-        return loading && <>Loading... </>
+        return loading && <Loading />
     }
 
     return (keyword && 
@@ -27,9 +28,10 @@ function ListOfGifs ({keyword, explicitContent}) {
             {
                 gifs.map(singleGif => 
                     <Gif 
+                        id={singleGif.id}
                         key={singleGif.id}
                         title={singleGif.title} 
-                        url={singleGif.images.original.webp}
+                        url={singleGif.images.original.url}
                         webp={singleGif.images.original.webp}
                     />
                 )

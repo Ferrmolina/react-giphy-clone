@@ -1,8 +1,6 @@
-function SearchService({keyword, explicitContent}) {
-    const apiKey = 'api_key=VomfU0e5q7McM4hkwopXsexwPflkihSp';
-    const query = `&q=${keyword}`
-    const rating = {explicitContent} ? 'r' : 'g'
-    const apiURL = `https://api.giphy.com/v1/gifs/search?${apiKey}${query}&limit=25&offset=0&rating=${rating}&lang=en`
+function SearchService({keyword}) {
+    const apiKey = 'VomfU0e5q7McM4hkwopXsexwPflkihSp';
+    const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=27&offset=0&rating=r&lang=en`
 
     return fetch(apiURL);
 }
