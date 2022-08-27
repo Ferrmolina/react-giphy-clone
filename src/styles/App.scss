@@ -17,6 +17,10 @@
   &-header {
     text-align: center;
 
+    img {
+      max-width: 100%;
+    }
+
     input[type='text'] {
       padding: 10px 20px;
       margin: 10px 0;
