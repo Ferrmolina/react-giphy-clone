@@ -3,7 +3,9 @@ import SearchService from "../services/SearchService";
 import Gif from "./Gif";
 import Loading from "./Loading";
 
-function ListOfGifs ({keyword}) {
+function ListOfGifs ({params}) {
+    console.log(params)
+    const {keyword} = params;
     const [gifs, setGifs] = useState([]);
     const [loading, setLoading] = useState();
     
