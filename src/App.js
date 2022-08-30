@@ -6,7 +6,7 @@ import './styles/App.scss';
 
 function App() {
   const [keyword, setKeyword] = useState();
-  const [path, pushLocation] = useLocation()
+  const [, pushLocation] = useLocation();
 
   function handleChange(ev) {
     setKeyword(ev.target.value)
