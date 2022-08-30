@@ -14,7 +14,9 @@ function App() {
 
   function handleSubmit(ev) {
     ev.preventDefault();
-    pushLocation(`/search/${keyword}`)
+    if (keyword !== undefined) {
+      pushLocation(`/search/${keyword}`)
+    }
   }
 
   return (
